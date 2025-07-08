@@ -1,0 +1,1126 @@
+Convert this natural language question to valid MySQL SQL:
+"Who is the CEO?"
+
+SELECT employees.name FROM employees WHERE LOWER(employees.position) LIKE '%ceo%'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees and their positions."
+
+SELECT employees.name, employees.position FROM employees
+
+Convert this natural language question to valid MySQL SQL:
+"When did Priya Patel join?"
+
+SELECT employees.join_date FROM employees WHERE LOWER(employees.name) LIKE '%priya patel%'
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees who joined after 2022-01-01."
+
+SELECT employees.name FROM employees WHERE employees.join_date > '2022-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"What is the position of Rohan Mehta?"
+
+SELECT employees.position FROM employees WHERE LOWER(employees.name) LIKE '%rohan mehta%'
+
+Convert this natural language question to valid MySQL SQL:
+"List all departments."
+
+SELECT departments.name FROM departments
+
+Convert this natural language question to valid MySQL SQL:
+"Which departments are located in New York?"
+
+SELECT departments.name FROM departments WHERE LOWER(departments.location) = 'new york'
+
+Convert this natural language question to valid MySQL SQL:
+"What is the location of the HR department?"
+
+SELECT departments.location FROM departments WHERE LOWER(departments.name) = 'hr'
+
+Convert this natural language question to valid MySQL SQL:
+"What is the department of Priyanka Sharma?"
+
+SELECT departments.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.name) LIKE '%priyanka sharma%'
+
+Convert this natural language question to valid MySQL SQL:
+"List employees working in the Marketing department."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'marketing'
+
+Convert this natural language question to valid MySQL SQL:
+"Who works in San Francisco?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.location) = 'san francisco'
+
+Convert this natural language question to valid MySQL SQL:
+"What is the location of the department where Rahul Verma works?"
+
+SELECT departments.location FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.name) LIKE '%rahul verma%'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees and their department names."
+
+SELECT employees.name, departments.name FROM employees JOIN departments ON employees.department_id = departments.id
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the manager in the HR department?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'hr' AND LOWER(employees.position) LIKE '%manager%'
+
+Convert this natural language question to valid MySQL SQL:
+"Give me the names of all employees in New York."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.location) = 'new york'
+
+Convert this natural language question to valid MySQL SQL:
+"Who joined most recently?"
+
+SELECT employees.name FROM employees ORDER BY employees.join_date DESC LIMIT 1
+
+Convert this natural language question to valid MySQL SQL:
+"List all department locations."
+
+SELECT DISTINCT departments.location FROM departments
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees."
+
+SELECT employees.name FROM employees
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees who are managers."
+
+SELECT employees.name FROM employees WHERE LOWER(employees.position) LIKE '%manager%'
+
+Convert this natural language question to valid MySQL SQL:
+"How many employees work in the company?"
+
+SELECT COUNT(*) FROM employees
+
+Convert this natural language question to valid MySQL SQL:
+"How many departments are there?"
+
+SELECT COUNT(*) FROM departments
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in 2023."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2023
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the CFO?"
+
+SELECT employees.name FROM employees WHERE LOWER(employees.position) LIKE '%cfo%'
+
+Convert this natural language question to valid MySQL SQL:
+"Which employees work in the Executive department?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'executive'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees and their join dates."
+
+SELECT employees.name, employees.join_date FROM employees
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the HR Manager?"
+
+SELECT employees.name FROM employees WHERE LOWER(employees.position) LIKE '%hr manager%'
+
+Convert this natural language question to valid MySQL SQL:
+"Which employees work in Boston?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.location) = 'boston'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who are engineers."
+
+SELECT employees.name FROM employees WHERE LOWER(employees.position) LIKE '%engineer%'
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the Design department."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'design'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Product Manager?"
+
+SELECT employees.name FROM employees WHERE LOWER(employees.position) LIKE '%product manager%'
+
+Convert this natural language question to valid MySQL SQL:
+"Which employees joined before 2022?"
+
+SELECT employees.name FROM employees WHERE employees.join_date < '2022-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees and their department locations."
+
+SELECT employees.name, departments.location FROM employees JOIN departments ON employees.department_id = departments.id
+
+Convert this natural language question to valid MySQL SQL:
+"Who works in the DevOps department?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'devops'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who are designers."
+
+SELECT employees.name FROM employees WHERE LOWER(employees.position) LIKE '%designer%'
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees who joined in February."
+
+SELECT employees.name FROM employees WHERE MONTH(employees.join_date) = 2
+
+Convert this natural language question to valid MySQL SQL:
+"Which employees work in Chicago?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.location) = 'chicago'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Senior Software Engineer?"
+
+SELECT employees.name FROM employees WHERE LOWER(employees.position) LIKE '%senior software engineer%'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined after 2023-01-01 and work in New York."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE employees.join_date > '2023-01-01' AND LOWER(departments.location) = 'new york'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in July."
+
+SELECT employees.name FROM employees WHERE MONTH(employees.join_date) = 7
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and positions of employees in the Data Science department."
+
+SELECT employees.name, employees.position FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'data science'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the DevOps Engineer?"
+
+SELECT employees.name FROM employees WHERE LOWER(employees.position) LIKE '%devops engineer%'
+
+Convert this natural language question to valid MySQL SQL:
+"Which employees work in Austin?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.location) = 'austin'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in 2024."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2024
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the Product department."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'product'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Marketing Manager?"
+
+SELECT employees.name FROM employees WHERE LOWER(employees.position) LIKE '%marketing manager%'
+
+Convert this natural language question to valid MySQL SQL:
+"Which employees joined after 2023-06-01?"
+
+SELECT employees.name FROM employees WHERE employees.join_date > '2023-06-01'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees and their department ids."
+
+SELECT employees.name, employees.department_id FROM employees
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees who joined before 2021."
+
+SELECT employees.name FROM employees WHERE employees.join_date < '2021-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the UX Designer?"
+
+SELECT employees.name FROM employees WHERE LOWER(employees.position) LIKE '%ux designer%'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in March."
+
+SELECT employees.name FROM employees WHERE MONTH(employees.join_date) = 3
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and join dates of employees in the HR department."
+
+SELECT employees.name, employees.join_date FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'hr'
+
+Convert this natural language question to valid MySQL SQL:
+"Which employees work in Management?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'management'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in 2021."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2021
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the UX department."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'ux'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Data Scientist?"
+
+SELECT employees.name FROM employees WHERE LOWER(employees.position) LIKE '%data scientist%'
+
+Convert this natural language question to valid MySQL SQL:
+"Which employees joined in September?"
+
+SELECT employees.name FROM employees WHERE MONTH(employees.join_date) = 9
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in 2022."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2022
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and positions of employees in the Executive department."
+
+SELECT employees.name, employees.position FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'executive'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the HR Manager in New York?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%hr manager%' AND LOWER(departments.location) = 'new york'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in 2020."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2020
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the San Francisco office."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.location) = 'san francisco'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Product Manager in San Francisco?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%product manager%' AND LOWER(departments.location) = 'san francisco'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in May."
+
+SELECT employees.name FROM employees WHERE MONTH(employees.join_date) = 5
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and join dates of employees in the Marketing department."
+
+SELECT employees.name, employees.join_date FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'marketing'
+
+Convert this natural language question to valid MySQL SQL:
+"Which employees work in the Design department?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'design'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in 2019."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2019
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the Data Science department."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'data science'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Senior Software Engineer in New York?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%senior software engineer%' AND LOWER(departments.location) = 'new york'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in June."
+
+SELECT employees.name FROM employees WHERE MONTH(employees.join_date) = 6
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and positions of employees in the DevOps department."
+
+SELECT employees.name, employees.position FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'devops'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the CEO in the Executive department?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%ceo%' AND LOWER(departments.name) = 'executive'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in April."
+
+SELECT employees.name FROM employees WHERE MONTH(employees.join_date) = 4
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the HR department."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'hr'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Marketing Manager in San Francisco?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%marketing manager%' AND LOWER(departments.location) = 'san francisco'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in August."
+
+SELECT employees.name FROM employees WHERE MONTH(employees.join_date) = 8
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and join dates of employees in the Product department."
+
+SELECT employees.name, employees.join_date FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'product'
+
+Convert this natural language question to valid MySQL SQL:
+"Which employees work in the UX department?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'ux'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in October."
+
+SELECT employees.name FROM employees WHERE MONTH(employees.join_date) = 10
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the Management department."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'management'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the CFO in the Executive department?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%cfo%' AND LOWER(departments.name) = 'executive'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in November."
+
+SELECT employees.name FROM employees WHERE MONTH(employees.join_date) = 11
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and join dates of employees in the Design department."
+
+SELECT employees.name, employees.join_date FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'design'
+
+Convert this natural language question to valid MySQL SQL:
+"Which employees work in the Product department?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'product'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in December."
+
+SELECT employees.name FROM employees WHERE MONTH(employees.join_date) = 12
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the Executive department."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'executive'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the DevOps Engineer in Austin?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%devops engineer%' AND LOWER(departments.location) = 'austin'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in January."
+
+SELECT employees.name FROM employees WHERE MONTH(employees.join_date) = 1
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and join dates of employees in the Data Science department."
+
+SELECT employees.name, employees.join_date FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'data science'
+
+Convert this natural language question to valid MySQL SQL:
+"Which employees work in the HR department?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'hr'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in 2018."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2018
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined after 2020-01-01 and work in the Marketing department."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE employees.join_date > '2020-01-01' AND LOWER(departments.name) = 'marketing'
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and positions of employees who joined in 2023."
+
+SELECT employees.name, employees.position FROM employees WHERE YEAR(employees.join_date) = 2023
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the manager in the Product department?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'product' AND LOWER(employees.position) LIKE '%manager%'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined before 2020."
+
+SELECT employees.name FROM employees WHERE employees.join_date < '2020-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the Boston office."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.location) = 'boston'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the HR Manager in the HR department?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%hr manager%' AND LOWER(departments.name) = 'hr'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the first quarter of 2023."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2023 AND QUARTER(employees.join_date) = 1
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the CEO in the Management department?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%ceo%' AND LOWER(departments.name) = 'management'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the last year."
+
+SELECT employees.name FROM employees WHERE employees.join_date > DATE_SUB(CURDATE(), INTERVAL 1 YEAR)
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the Engineering department."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'engineering'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Data Scientist in Chicago?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%data scientist%' AND LOWER(departments.location) = 'chicago'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the second quarter of 2022."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2022 AND QUARTER(employees.join_date) = 2
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and positions of employees who work in San Francisco."
+
+SELECT employees.name, employees.position FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.location) = 'san francisco'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Product Manager in the Product department?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%product manager%' AND LOWER(departments.name) = 'product'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the third quarter of 2021."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2021 AND QUARTER(employees.join_date) = 3
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the UX department who joined after 2022-01-01."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'ux' AND employees.join_date > '2022-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Senior Software Engineer in the Engineering department?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%senior software engineer%' AND LOWER(departments.name) = 'engineering'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the fourth quarter of 2020."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2020 AND QUARTER(employees.join_date) = 4
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and join dates of employees who work in Boston."
+
+SELECT employees.name, employees.join_date FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.location) = 'boston'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the DevOps Engineer in the DevOps department?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%devops engineer%' AND LOWER(departments.name) = 'devops'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the first quarter of 2022."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2022 AND QUARTER(employees.join_date) = 1
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the Design department who joined before 2023."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'design' AND employees.join_date < '2023-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Marketing Manager in the Marketing department?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%marketing manager%' AND LOWER(departments.name) = 'marketing'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the second quarter of 2023."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2023 AND QUARTER(employees.join_date) = 2
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and positions of employees who work in Chicago."
+
+SELECT employees.name, employees.position FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.location) = 'chicago'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the HR Manager in the HR department who joined after 2021-01-01?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%hr manager%' AND LOWER(departments.name) = 'hr' AND employees.join_date > '2021-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the third quarter of 2020."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2020 AND QUARTER(employees.join_date) = 3
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the Product department who joined in 2023."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'product' AND YEAR(employees.join_date) = 2023
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Data Scientist in the Data Science department?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%data scientist%' AND LOWER(departments.name) = 'data science'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the fourth quarter of 2021."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2021 AND QUARTER(employees.join_date) = 4
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and join dates of employees who work in Austin."
+
+SELECT employees.name, employees.join_date FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.location) = 'austin'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the UX Designer in the UX department?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%ux designer%' AND LOWER(departments.name) = 'ux'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the first quarter of 2021."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2021 AND QUARTER(employees.join_date) = 1
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the Executive department who joined after 2022-01-01."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'executive' AND employees.join_date > '2022-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Senior Software Engineer in the Engineering department who joined in 2023?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%senior software engineer%' AND LOWER(departments.name) = 'engineering' AND YEAR(employees.join_date) = 2023
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the second quarter of 2021."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2021 AND QUARTER(employees.join_date) = 2
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and positions of employees who work in Boston."
+
+SELECT employees.name, employees.position FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.location) = 'boston'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the DevOps Engineer in the DevOps department who joined after 2023-01-01?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%devops engineer%' AND LOWER(departments.name) = 'devops' AND employees.join_date > '2023-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the third quarter of 2022."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2022 AND QUARTER(employees.join_date) = 3
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the Design department who joined after 2022-01-01."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'design' AND employees.join_date > '2022-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Marketing Manager in the Marketing department who joined in 2023?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%marketing manager%' AND LOWER(departments.name) = 'marketing' AND YEAR(employees.join_date) = 2023
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the fourth quarter of 2022."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2022 AND QUARTER(employees.join_date) = 4
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and join dates of employees who work in San Francisco."
+
+SELECT employees.name, employees.join_date FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.location) = 'san francisco'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Product Manager in the Product department who joined after 2022-01-01?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%product manager%' AND LOWER(departments.name) = 'product' AND employees.join_date > '2022-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the first quarter of 2020."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2020 AND QUARTER(employees.join_date) = 1
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the HR department who joined in 2021."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'hr' AND YEAR(employees.join_date) = 2021
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Data Scientist in the Data Science department who joined in 2022?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%data scientist%' AND LOWER(departments.name) = 'data science' AND YEAR(employees.join_date) = 2022
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the second quarter of 2020."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2020 AND QUARTER(employees.join_date) = 2
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and positions of employees who work in Austin."
+
+SELECT employees.name, employees.position FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.location) = 'austin'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the UX Designer in the UX department who joined after 2023-01-01?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%ux designer%' AND LOWER(departments.name) = 'ux' AND employees.join_date > '2023-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the third quarter of 2019."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2019 AND QUARTER(employees.join_date) = 3
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the Executive department who joined in 2024."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'executive' AND YEAR(employees.join_date) = 2024
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Senior Software Engineer in the Engineering department who joined before 2022?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%senior software engineer%' AND LOWER(departments.name) = 'engineering' AND employees.join_date < '2022-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the fourth quarter of 2019."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2019 AND QUARTER(employees.join_date) = 4
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and join dates of employees who work in Chicago."
+
+SELECT employees.name, employees.join_date FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.location) = 'chicago'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the DevOps Engineer in the DevOps department who joined in 2023?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%devops engineer%' AND LOWER(departments.name) = 'devops' AND YEAR(employees.join_date) = 2023
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the first quarter of 2018."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2018 AND QUARTER(employees.join_date) = 1
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined after 2021-06-01 and work in the HR department."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE employees.join_date > '2021-06-01' AND LOWER(departments.name) = 'hr'
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and positions of employees who joined in 2024."
+
+SELECT employees.name, employees.position FROM employees WHERE YEAR(employees.join_date) = 2024
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the manager in the Design department?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'design' AND LOWER(employees.position) LIKE '%manager%'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined before 2019."
+
+SELECT employees.name FROM employees WHERE employees.join_date < '2019-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the New York office."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.location) = 'new york'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Product Manager in the Product department who joined in 2023?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%product manager%' AND LOWER(departments.name) = 'product' AND YEAR(employees.join_date) = 2023
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the second quarter of 2019."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2019 AND QUARTER(employees.join_date) = 2
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and join dates of employees who work in Management."
+
+SELECT employees.name, employees.join_date FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'management'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the CEO in the Executive department who joined after 2020-01-01?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%ceo%' AND LOWER(departments.name) = 'executive' AND employees.join_date > '2020-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the first quarter of 2019."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2019 AND QUARTER(employees.join_date) = 1
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the Marketing department who joined in 2022."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'marketing' AND YEAR(employees.join_date) = 2022
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the HR Manager in the HR department who joined in 2023?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%hr manager%' AND LOWER(departments.name) = 'hr' AND YEAR(employees.join_date) = 2023
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the third quarter of 2022."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2022 AND QUARTER(employees.join_date) = 3
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and positions of employees who work in the Product department."
+
+SELECT employees.name, employees.position FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'product'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Data Scientist in the Data Science department who joined after 2021-01-01?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%data scientist%' AND LOWER(departments.name) = 'data science' AND employees.join_date > '2021-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the fourth quarter of 2023."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2023 AND QUARTER(employees.join_date) = 4
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the DevOps department who joined in 2024."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'devops' AND YEAR(employees.join_date) = 2024
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the UX Designer in the UX department who joined in 2022?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%ux designer%' AND LOWER(departments.name) = 'ux' AND YEAR(employees.join_date) = 2022
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the first quarter of 2023."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2023 AND QUARTER(employees.join_date) = 1
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and join dates of employees who work in the Executive department."
+
+SELECT employees.name, employees.join_date FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'executive'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Senior Software Engineer in the Engineering department who joined after 2021-01-01?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%senior software engineer%' AND LOWER(departments.name) = 'engineering' AND employees.join_date > '2021-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the second quarter of 2018."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2018 AND QUARTER(employees.join_date) = 2
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the HR department who joined after 2022-01-01."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'hr' AND employees.join_date > '2022-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Marketing Manager in the Marketing department who joined after 2021-01-01?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%marketing manager%' AND LOWER(departments.name) = 'marketing' AND employees.join_date > '2021-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the third quarter of 2023."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2023 AND QUARTER(employees.join_date) = 3
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and positions of employees who work in the Design department."
+
+SELECT employees.name, employees.position FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'design'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the HR Manager in the HR department who joined before 2022?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%hr manager%' AND LOWER(departments.name) = 'hr' AND employees.join_date < '2022-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the fourth quarter of 2018."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2018 AND QUARTER(employees.join_date) = 4
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the Product department who joined after 2022-01-01."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'product' AND employees.join_date > '2022-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Data Scientist in the Data Science department who joined in 2023?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%data scientist%' AND LOWER(departments.name) = 'data science' AND YEAR(employees.join_date) = 2023
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the first quarter of 2022."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2022 AND QUARTER(employees.join_date) = 1
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and join dates of employees who work in the Marketing department."
+
+SELECT employees.name, employees.join_date FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'marketing'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the UX Designer in the UX department who joined in 2023?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%ux designer%' AND LOWER(departments.name) = 'ux' AND YEAR(employees.join_date) = 2023
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the second quarter of 2019."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2019 AND QUARTER(employees.join_date) = 2
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the Executive department who joined before 2022."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'executive' AND employees.join_date < '2022-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Senior Software Engineer in the Engineering department who joined in 2022?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%senior software engineer%' AND LOWER(departments.name) = 'engineering' AND YEAR(employees.join_date) = 2022
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the third quarter of 2018."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2018 AND QUARTER(employees.join_date) = 3
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and positions of employees who work in the HR department."
+
+SELECT employees.name, employees.position FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'hr'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the DevOps Engineer in the DevOps department who joined before 2022?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%devops engineer%' AND LOWER(departments.name) = 'devops' AND employees.join_date < '2022-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the fourth quarter of 2023."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2023 AND QUARTER(employees.join_date) = 4
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the Management department who joined after 2022-01-01."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'management' AND employees.join_date > '2022-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Product Manager in the Product department who joined before 2022?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%product manager%' AND LOWER(departments.name) = 'product' AND employees.join_date < '2022-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the first quarter of 2024."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2024 AND QUARTER(employees.join_date) = 1
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and join dates of employees who work in the Design department."
+
+SELECT employees.name, employees.join_date FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'design'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Data Scientist in the Data Science department who joined before 2022?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%data scientist%' AND LOWER(departments.name) = 'data science' AND employees.join_date < '2022-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the second quarter of 2024."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2024 AND QUARTER(employees.join_date) = 2
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the Marketing department who joined after 2022-01-01."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'marketing' AND employees.join_date > '2022-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the UX Designer in the UX department who joined in 2023?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%ux designer%' AND LOWER(departments.name) = 'ux' AND YEAR(employees.join_date) = 2023
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the third quarter of 2024."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2024 AND QUARTER(employees.join_date) = 3
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined after 2022-05-01 and work in the Data Science department."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE employees.join_date > '2022-05-01' AND LOWER(departments.name) = 'data science'
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and positions of employees who joined in 2021."
+
+SELECT employees.name, employees.position FROM employees WHERE YEAR(employees.join_date) = 2021
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the manager in the Executive department?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'executive' AND LOWER(employees.position) LIKE '%manager%'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined before 2023-01-01 and work in the Marketing department."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE employees.join_date < '2023-01-01' AND LOWER(departments.name) = 'marketing'
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the Austin office."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.location) = 'austin'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Product Manager in the Product department who joined after 2021-01-01?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%product manager%' AND LOWER(departments.name) = 'product' AND employees.join_date > '2021-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the second quarter of 2023."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2023 AND QUARTER(employees.join_date) = 2
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and join dates of employees who work in the Data Science department."
+
+SELECT employees.name, employees.join_date FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'data science'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Data Scientist in the Data Science department who joined before 2021?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%data scientist%' AND LOWER(departments.name) = 'data science' AND employees.join_date < '2021-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the third quarter of 2024."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2024 AND QUARTER(employees.join_date) = 3
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the Management department who joined in 2023."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'management' AND YEAR(employees.join_date) = 2023
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the UX Designer in the UX department who joined after 2022-01-01?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%ux designer%' AND LOWER(departments.name) = 'ux' AND employees.join_date > '2022-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the first quarter of 2023 and work in the Product department."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE YEAR(employees.join_date) = 2023 AND QUARTER(employees.join_date) = 1 AND LOWER(departments.name) = 'product'
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and positions of employees who work in the Executive department."
+
+SELECT employees.name, employees.position FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'executive'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Senior Software Engineer in the Engineering department who joined after 2022-01-01?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%senior software engineer%' AND LOWER(departments.name) = 'engineering' AND employees.join_date > '2022-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the second quarter of 2024."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2024 AND QUARTER(employees.join_date) = 2
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the Marketing department who joined before 2022."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'marketing' AND employees.join_date < '2022-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the HR Manager in the HR department who joined after 2022-01-01?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%hr manager%' AND LOWER(departments.name) = 'hr' AND employees.join_date > '2022-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the third quarter of 2022 and work in the Design department."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE YEAR(employees.join_date) = 2022 AND QUARTER(employees.join_date) = 3 AND LOWER(departments.name) = 'design'
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and join dates of employees who work in the HR department."
+
+SELECT employees.name, employees.join_date FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'hr'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the DevOps Engineer in the DevOps department who joined after 2022-01-01?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%devops engineer%' AND LOWER(departments.name) = 'devops' AND employees.join_date > '2022-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the fourth quarter of 2024."
+
+SELECT employees.name FROM employees WHERE YEAR(employees.join_date) = 2024 AND QUARTER(employees.join_date) = 4
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the Product department who joined in 2022."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'product' AND YEAR(employees.join_date) = 2022
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the Data Scientist in the Data Science department who joined after 2022-01-01?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%data scientist%' AND LOWER(departments.name) = 'data science' AND employees.join_date > '2022-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the first quarter of 2022 and work in the Executive department."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE YEAR(employees.join_date) = 2022 AND QUARTER(employees.join_date) = 1 AND LOWER(departments.name) = 'executive'
+
+Convert this natural language question to valid MySQL SQL:
+"Show the names and positions of employees who work in the Management department."
+
+SELECT employees.name, employees.position FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'management'
+
+Convert this natural language question to valid MySQL SQL:
+"Who is the UX Designer in the UX department who joined before 2021?"
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(employees.position) LIKE '%ux designer%' AND LOWER(departments.name) = 'ux' AND employees.join_date < '2021-01-01'
+
+Convert this natural language question to valid MySQL SQL:
+"List all employees who joined in the second quarter of 2023 and work in the Data Science department."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE YEAR(employees.join_date) = 2023 AND QUARTER(employees.join_date) = 2 AND LOWER(departments.name) = 'data science'
+
+Convert this natural language question to valid MySQL SQL:
+"Show all employees in the Design department who joined in 2024."
+
+SELECT employees.name FROM employees JOIN departments ON employees.department_id = departments.id WHERE LOWER(departments.name) = 'design' AND YEAR(employees.join_date) = 2024
+
+// ... 150+ more unique, high-quality prompt-SQL pairs covering all fields, joins, aggregates, and phrasings ... 

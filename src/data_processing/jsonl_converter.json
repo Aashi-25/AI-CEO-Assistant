@@ -1,0 +1,434 @@
+[
+  {
+    "question": "What is Aarav Sharma's position?",
+    "sql": "SELECT position FROM employees WHERE name = 'Aarav Sharma'"
+  },
+  {
+    "question": "What job does Aarav Sharma do?",
+    "sql": "SELECT position FROM employees WHERE name = 'Aarav Sharma'"
+  },
+  {
+    "question": "When did Aarav Sharma join the company?",
+    "sql": "SELECT join_date FROM employees WHERE name = 'Aarav Sharma'"
+  },
+  {
+    "question": "What is Aarav Sharma's start date?",
+    "sql": "SELECT join_date FROM employees WHERE name = 'Aarav Sharma'"
+  },
+  {
+    "question": "What is Sharma's position?",
+    "sql": "SELECT position FROM employees WHERE name LIKE '%Sharma%'"
+  },
+  {
+    "question": "When did Aarav join?",
+    "sql": "SELECT join_date FROM employees WHERE name LIKE '%Aarav%'"
+  },
+  {
+    "question": "What is Priya Patel's position?",
+    "sql": "SELECT position FROM employees WHERE name = 'Priya Patel'"
+  },
+  {
+    "question": "What job does Priya Patel do?",
+    "sql": "SELECT position FROM employees WHERE name = 'Priya Patel'"
+  },
+  {
+    "question": "When did Priya Patel join the company?",
+    "sql": "SELECT join_date FROM employees WHERE name = 'Priya Patel'"
+  },
+  {
+    "question": "What is Priya Patel's start date?",
+    "sql": "SELECT join_date FROM employees WHERE name = 'Priya Patel'"
+  },
+  {
+    "question": "What is Patel's position?",
+    "sql": "SELECT position FROM employees WHERE name LIKE '%Patel%'"
+  },
+  {
+    "question": "When did Priya join?",
+    "sql": "SELECT join_date FROM employees WHERE name LIKE '%Priya%'"
+  },
+  {
+    "question": "What is Rohan Mehta's position?",
+    "sql": "SELECT position FROM employees WHERE name = 'Rohan Mehta'"
+  },
+  {
+    "question": "What job does Rohan Mehta do?",
+    "sql": "SELECT position FROM employees WHERE name = 'Rohan Mehta'"
+  },
+  {
+    "question": "When did Rohan Mehta join the company?",
+    "sql": "SELECT join_date FROM employees WHERE name = 'Rohan Mehta'"
+  },
+  {
+    "question": "What is Rohan Mehta's start date?",
+    "sql": "SELECT join_date FROM employees WHERE name = 'Rohan Mehta'"
+  },
+  {
+    "question": "Is Rohan Mehta an engineer?",
+    "sql": "SELECT name FROM employees WHERE name = 'Rohan Mehta' AND position LIKE '%engineer%'"
+  },
+  {
+    "question": "What is Mehta's position?",
+    "sql": "SELECT position FROM employees WHERE name LIKE '%Mehta%'"
+  },
+  {
+    "question": "When did Rohan join?",
+    "sql": "SELECT join_date FROM employees WHERE name LIKE '%Rohan%'"
+  },
+  {
+    "question": "What is Sonia Singh's position?",
+    "sql": "SELECT position FROM employees WHERE name = 'Sonia Singh'"
+  },
+  {
+    "question": "What job does Sonia Singh do?",
+    "sql": "SELECT position FROM employees WHERE name = 'Sonia Singh'"
+  },
+  {
+    "question": "When did Sonia Singh join the company?",
+    "sql": "SELECT join_date FROM employees WHERE name = 'Sonia Singh'"
+  },
+  {
+    "question": "What is Sonia Singh's start date?",
+    "sql": "SELECT join_date FROM employees WHERE name = 'Sonia Singh'"
+  },
+  {
+    "question": "What is Singh's position?",
+    "sql": "SELECT position FROM employees WHERE name LIKE '%Singh%'"
+  },
+  {
+    "question": "When did Sonia join?",
+    "sql": "SELECT join_date FROM employees WHERE name LIKE '%Sonia%'"
+  },
+  {
+    "question": "What is Rahul Verma's position?",
+    "sql": "SELECT position FROM employees WHERE name = 'Rahul Verma'"
+  },
+  {
+    "question": "What job does Rahul Verma do?",
+    "sql": "SELECT position FROM employees WHERE name = 'Rahul Verma'"
+  },
+  {
+    "question": "When did Rahul Verma join the company?",
+    "sql": "SELECT join_date FROM employees WHERE name = 'Rahul Verma'"
+  },
+  {
+    "question": "What is Rahul Verma's start date?",
+    "sql": "SELECT join_date FROM employees WHERE name = 'Rahul Verma'"
+  },
+  {
+    "question": "Is Rahul Verma an engineer?",
+    "sql": "SELECT name FROM employees WHERE name = 'Rahul Verma' AND position LIKE '%engineer%'"
+  },
+  {
+    "question": "What is Verma's position?",
+    "sql": "SELECT position FROM employees WHERE name LIKE '%Verma%'"
+  },
+  {
+    "question": "When did Rahul join?",
+    "sql": "SELECT join_date FROM employees WHERE name LIKE '%Rahul%'"
+  },
+  {
+    "question": "What is Ananya Desai's position?",
+    "sql": "SELECT position FROM employees WHERE name = 'Ananya Desai'"
+  },
+  {
+    "question": "What job does Ananya Desai do?",
+    "sql": "SELECT position FROM employees WHERE name = 'Ananya Desai'"
+  },
+  {
+    "question": "When did Ananya Desai join the company?",
+    "sql": "SELECT join_date FROM employees WHERE name = 'Ananya Desai'"
+  },
+  {
+    "question": "What is Ananya Desai's start date?",
+    "sql": "SELECT join_date FROM employees WHERE name = 'Ananya Desai'"
+  },
+  {
+    "question": "What is Desai's position?",
+    "sql": "SELECT position FROM employees WHERE name LIKE '%Desai%'"
+  },
+  {
+    "question": "When did Ananya join?",
+    "sql": "SELECT join_date FROM employees WHERE name LIKE '%Ananya%'"
+  },
+  {
+    "question": "What is Vikram Singh's position?",
+    "sql": "SELECT position FROM employees WHERE name = 'Vikram Singh'"
+  },
+  {
+    "question": "What job does Vikram Singh do?",
+    "sql": "SELECT position FROM employees WHERE name = 'Vikram Singh'"
+  },
+  {
+    "question": "When did Vikram Singh join the company?",
+    "sql": "SELECT join_date FROM employees WHERE name = 'Vikram Singh'"
+  },
+  {
+    "question": "What is Vikram Singh's start date?",
+    "sql": "SELECT join_date FROM employees WHERE name = 'Vikram Singh'"
+  },
+  {
+    "question": "What is Singh's position?",
+    "sql": "SELECT position FROM employees WHERE name LIKE '%Singh%'"
+  },
+  {
+    "question": "When did Vikram join?",
+    "sql": "SELECT join_date FROM employees WHERE name LIKE '%Vikram%'"
+  },
+  {
+    "question": "What is Meera Patel's position?",
+    "sql": "SELECT position FROM employees WHERE name = 'Meera Patel'"
+  },
+  {
+    "question": "What job does Meera Patel do?",
+    "sql": "SELECT position FROM employees WHERE name = 'Meera Patel'"
+  },
+  {
+    "question": "When did Meera Patel join the company?",
+    "sql": "SELECT join_date FROM employees WHERE name = 'Meera Patel'"
+  },
+  {
+    "question": "What is Meera Patel's start date?",
+    "sql": "SELECT join_date FROM employees WHERE name = 'Meera Patel'"
+  },
+  {
+    "question": "What is Patel's position?",
+    "sql": "SELECT position FROM employees WHERE name LIKE '%Patel%'"
+  },
+  {
+    "question": "When did Meera join?",
+    "sql": "SELECT join_date FROM employees WHERE name LIKE '%Meera%'"
+  },
+  {
+    "question": "What is Arjun Kumar's position?",
+    "sql": "SELECT position FROM employees WHERE name = 'Arjun Kumar'"
+  },
+  {
+    "question": "What job does Arjun Kumar do?",
+    "sql": "SELECT position FROM employees WHERE name = 'Arjun Kumar'"
+  },
+  {
+    "question": "When did Arjun Kumar join the company?",
+    "sql": "SELECT join_date FROM employees WHERE name = 'Arjun Kumar'"
+  },
+  {
+    "question": "What is Arjun Kumar's start date?",
+    "sql": "SELECT join_date FROM employees WHERE name = 'Arjun Kumar'"
+  },
+  {
+    "question": "Is Arjun Kumar an engineer?",
+    "sql": "SELECT name FROM employees WHERE name = 'Arjun Kumar' AND position LIKE '%engineer%'"
+  },
+  {
+    "question": "What is Kumar's position?",
+    "sql": "SELECT position FROM employees WHERE name LIKE '%Kumar%'"
+  },
+  {
+    "question": "When did Arjun join?",
+    "sql": "SELECT join_date FROM employees WHERE name LIKE '%Arjun%'"
+  },
+  {
+    "question": "What is Priyanka Sharma's position?",
+    "sql": "SELECT position FROM employees WHERE name = 'Priyanka Sharma'"
+  },
+  {
+    "question": "What job does Priyanka Sharma do?",
+    "sql": "SELECT position FROM employees WHERE name = 'Priyanka Sharma'"
+  },
+  {
+    "question": "When did Priyanka Sharma join the company?",
+    "sql": "SELECT join_date FROM employees WHERE name = 'Priyanka Sharma'"
+  },
+  {
+    "question": "What is Priyanka Sharma's start date?",
+    "sql": "SELECT join_date FROM employees WHERE name = 'Priyanka Sharma'"
+  },
+  {
+    "question": "What is Sharma's position?",
+    "sql": "SELECT position FROM employees WHERE name LIKE '%Sharma%'"
+  },
+  {
+    "question": "When did Priyanka join?",
+    "sql": "SELECT join_date FROM employees WHERE name LIKE '%Priyanka%'"
+  },
+  {
+    "question": "How many employees work here?",
+    "sql": "SELECT COUNT(*) FROM employees"
+  },
+  {
+    "question": "Who is the CEO?",
+    "sql": "SELECT name FROM employees WHERE position LIKE '%CEO%'"
+  },
+  {
+    "question": "List all engineers",
+    "sql": "SELECT name FROM employees WHERE position LIKE '%engineer%'"
+  },
+  {
+    "question": "Who joined after 2023?",
+    "sql": "SELECT name FROM employees WHERE join_date > '2023-01-01'"
+  },
+  {
+    "question": "What positions do we have?",
+    "sql": "SELECT DISTINCT position FROM employees"
+  },
+  {
+    "question": "Show management team",
+    "sql": "SELECT name FROM employees WHERE position LIKE '%manager%'"
+  },
+  {
+    "question": "Most recent hires",
+    "sql": "SELECT name FROM employees ORDER BY join_date DESC LIMIT 3"
+  },
+  {
+    "question": "Longest serving employees",
+    "sql": "SELECT name FROM employees ORDER BY join_date ASC LIMIT 3"
+  },
+  {
+    "question": "Total number of staff?",
+    "sql": "SELECT COUNT(*) FROM employees"
+  },
+  {
+    "question": "Name of our chief executive?",
+    "sql": "SELECT name FROM employees WHERE position LIKE '%CEO%'"
+  },
+  {
+    "question": "Show engineering team",
+    "sql": "SELECT name FROM employees WHERE position LIKE '%engineer%'"
+  },
+  {
+    "question": "Employees hired since 2023",
+    "sql": "SELECT name FROM employees WHERE join_date > '2023-01-01'"
+  },
+  {
+    "question": "Who has the longest tenure?",
+    "sql": "SELECT name FROM employees ORDER BY join_date ASC LIMIT 1"
+  },
+  {
+    "question": "Newest team members",
+    "sql": "SELECT name FROM employees ORDER BY join_date DESC LIMIT 3"
+  },
+  {
+    "question": "List management positions",
+    "sql": "SELECT DISTINCT position FROM employees WHERE position LIKE '%manager%'"
+  },
+  {
+    "question": "Count of engineers",
+    "sql": "SELECT COUNT(*) FROM employees WHERE position LIKE '%engineer%'"
+  },
+  {
+    "question": "All employee names",
+    "sql": "SELECT name FROM employees ORDER BY name"
+  },
+  {
+    "question": "Hires in 2023",
+    "sql": "SELECT name FROM employees WHERE YEAR(join_date) = 2023"
+  },
+  {
+    "question": "Non-engineer staff",
+    "sql": "SELECT name FROM employees WHERE position NOT LIKE '%engineer%'"
+  },
+  {
+    "question": "Executive leadership",
+    "sql": "SELECT name, position FROM employees WHERE position IN ('CEO', 'CFO')"
+  },
+  {
+    "question": "Staff hired last year",
+    "sql": "SELECT name FROM employees WHERE YEAR(join_date) = YEAR(CURDATE()) - 1"
+  },
+  {
+    "question": "List UX designers",
+    "sql": "SELECT name FROM employees WHERE position LIKE '%UX designer%'"
+  },
+  {
+    "question": "Product team members",
+    "sql": "SELECT name FROM employees WHERE position LIKE '%product%'"
+  },
+  {
+    "question": "Marketing department",
+    "sql": "SELECT name FROM employees WHERE position LIKE '%marketing%'"
+  },
+  {
+    "question": "Technical staff",
+    "sql": "SELECT name FROM employees WHERE position LIKE '%engineer%' OR position LIKE '%developer%'"
+  },
+  {
+    "question": "Senior positions",
+    "sql": "SELECT name FROM employees WHERE position LIKE '%senior%'"
+  },
+  {
+    "question": "Junior positions",
+    "sql": "SELECT name FROM employees WHERE position LIKE '%junior%'"
+  },
+  {
+    "question": "Employee IDs and names",
+    "sql": "SELECT id, name FROM employees"
+  },
+  {
+    "question": "Who is the chief executive?",
+    "sql": "SELECT name FROM employees WHERE position LIKE '%CEO%'"
+  },
+  {
+    "question": "Name of the top executive?",
+    "sql": "SELECT name FROM employees WHERE position LIKE '%CEO%'"
+  },
+  {
+    "question": "Who is our chief executive officer?",
+    "sql": "SELECT name FROM employees WHERE position LIKE '%CEO%'"
+  },
+  {
+    "question": "Who is the head of the company?",
+    "sql": "SELECT name FROM employees WHERE position LIKE '%CEO%'"
+  },
+  {
+    "question": "Company leader?",
+    "sql": "SELECT name FROM employees WHERE position LIKE '%CEO%'"
+  },
+  {
+    "question": "Staff hired after 2023",
+    "sql": "SELECT name FROM employees WHERE join_date > '2023-01-01'"
+  },
+  {
+    "question": "Employees joined since 2023",
+    "sql": "SELECT name FROM employees WHERE join_date > '2023-01-01'"
+  },
+  {
+    "question": "Team members hired after 2023",
+    "sql": "SELECT name FROM employees WHERE join_date > '2023-01-01'"
+  },
+  {
+    "question": "Employees hired this year",
+    "sql": "SELECT name FROM employees WHERE YEAR(join_date) = YEAR(CURDATE())"
+  },
+  {
+    "question": "Hires in the last year",
+    "sql": "SELECT name FROM employees WHERE join_date > DATE_SUB(CURDATE(), INTERVAL 1 YEAR)"
+  },
+  {
+    "question": "What is Verma's job?",
+    "sql": "SELECT position FROM employees WHERE name LIKE '%Verma%'"
+  },
+  {
+    "question": "When did Singh start?",
+    "sql": "SELECT join_date FROM employees WHERE name LIKE '%Singh%'"
+  },
+  {
+    "question": "What position does Sharma hold?",
+    "sql": "SELECT position FROM employees WHERE name LIKE '%Sharma%'"
+  },
+  {
+    "question": "When did Kumar join?",
+    "sql": "SELECT join_date FROM employees WHERE name LIKE '%Kumar%'"
+  },
+  {
+    "question": "Who is the CFO?",
+    "sql": "SELECT name FROM employees WHERE position LIKE '%CFO%'"
+  },
+  {
+    "question": "List HR staff",
+    "sql": "SELECT name FROM employees WHERE position LIKE '%HR%'"
+  },
+  {
+    "question": "Marketing team members",
+    "sql": "SELECT name FROM employees WHERE position LIKE '%marketing%'"
+  }
+]
